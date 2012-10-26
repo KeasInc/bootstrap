@@ -18,7 +18,7 @@
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @grayDark, 0 1px 1px rgba(255,255,255,.75));
+  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @btnColor, 0 1px 1px rgba(255,255,255,.75));
   border: 1px solid @btnBorder;
   *border: 0; // Remove the border to prevent IE7's black border on input:focus
   border-bottom-color: darken(@btnBorder, 10%);
@@ -28,10 +28,10 @@
 
   // Hover state
   &:hover {
-    color: @grayDark;
+    color: @btnColor;
     text-decoration: none;
-    background-color: darken(@white, 10%);
-    *background-color: darken(@white, 15%); /* Buttons in IE7 don't get borders, so darken on hover */
+    background-color: darken(@btnBackground, 10%);
+    *background-color: darken(@btnBackground, 15%); /* Buttons in IE7 don't get borders, so darken on hover */
     background-position: 0 -15px;
 
     // transition is only when going to hover, otherwise the background
@@ -148,6 +148,10 @@ input[type="button"] {
   border-color: #c5c5c5;
   border-color: rgba(0,0,0,.15) rgba(0,0,0,.15) rgba(0,0,0,.25);
 }
+
+.btn {
+  .buttonBackground(@btnBackground, @btnBackgroundHighlight);
+}
 .btn-primary {
   .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
 }
@@ -171,6 +175,11 @@ input[type="button"] {
 .btn-inverse {
   .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
 }
+
+.btn-secondary {
+  .buttonBackground(@btnSecondaryBackground, @btnSecondaryBackgroundHighlight);
+}
+
 
 
 // Cross-browser Jank

@@ -13,22 +13,23 @@
 @grayDarker:            #222;
 @grayDark:              #333;
 @gray:                  #555;
-@grayLight:             #999;
-@grayLighter:           #eee;
+@grayLight:             #D4D4D4;
+@grayLighter:           #F2F2F2;
 @white:                 #fff;
 
 
 // Accent colors
 // -------------------------
-@blue:                  #049cdb;
-@blueDark:              #0064cd;
-@green:                 #46a546;
-@red:                   #9d261d;
-@yellow:                #ffc40d;
-@orange:                #f89406;
-@pink:                  #c3325f;
-@purple:                #7a43b6;
-
+@blue:                  #007E93;
+@blueDark:              #80D0E4;
+@blueLight:             #66C9F0;
+@green:                 #51B848;
+@greenDark:             #288C43;
+@red:                   #9d261d; // not used by keas
+@yellow:                #ffc40d; // not used by keas
+@orange:                #F7941E;
+@pink:                  #c3325f; // not used by keas
+@purple:                #A2689C;
 
 // Scaffolding
 // -------------------------
@@ -38,7 +39,7 @@
 
 // Links
 // -------------------------
-@linkColor:             #08c;
+@linkColor:             @green;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -84,12 +85,13 @@
 
 // Buttons
 // -------------------------
-@btnBackground:                     @white;
-@btnBackgroundHighlight:            darken(@white, 10%);
-@btnBorder:                         #bbb;
+@btnBackground:                     @blue;
+@btnBackgroundHighlight:            darken(@blue, 5%);
+@btnBorder:                         @blue;
+@btnColor:                          @blue;
 
-@btnPrimaryBackground:              @linkColor;
-@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
+@btnPrimaryBackground:              #F99400;
+@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 10%);
 
 @btnInfoBackground:                 #5bc0de;
 @btnInfoBackgroundHighlight:        #2f96b4;
@@ -105,6 +107,9 @@
 
 @btnInverseBackground:              #444;
 @btnInverseBackgroundHighlight:     @grayDarker;
+
+@btnSecondaryBackground:              @grayLighter;
+@btnSecondaryBackgroundHighlight:     @grayLight;
 
 
 // Forms
@@ -151,8 +156,8 @@
 
 // Sprite icons path
 // -------------------------
-@iconSpritePath:          "../img/glyphicons-halflings.png";
-@iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
+@iconSpritePath:          "/assets/twitter-bootstrap/glyphicons-halflings.png";
+@iconWhiteSpritePath:     "/assets/twitter-bootstrap/glyphicons-halflings-white.png";
 
 
 // Input placeholder text color
@@ -181,12 +186,12 @@
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    40px;
-@navbarBackgroundHighlight:       #ffffff;
-@navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
-@navbarBorder:                    darken(@navbarBackground, 12%);
+@navbarBackgroundHighlight:       #007E93;
+@navbarBackground:                #007E93; // darken(@navbarBackgroundHighlight, 5%);
+@navbarBorder:                    #007E93; //darken(@navbarBackground, 12%);
 
-@navbarText:                      #777;
-@navbarLinkColor:                 #777;
+@navbarText:                      #FFF;
+@navbarLinkColor:                 #FFF;
 @navbarLinkColorHover:            @grayDark;
 @navbarLinkColorActive:           @gray;
 @navbarLinkBackgroundHover:       transparent;
